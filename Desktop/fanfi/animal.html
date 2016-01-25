@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Galeria animales</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#change1").click(function () {
+                    $(".carousel-inner").width(375).height(375);
+                    $(".carousel-indicators").width(233);
+                    $("#micarousel").width(375);
+                });
+                $("#change2").click(function () {
+                    $(".carousel-inner").width(250).height(250);
+                    $(".carousel-indicators").width(150);
+                    $("#micarousel").width(250);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <!--header-->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="http://www.deliverea.com"><img alt="Brand" src="https://www.deliverea.com/includes/templates/images/common/logo-deliverea.svg"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a class="page-scroll" href="#page-top"></a>
+                        </li>
+                    </ul>
+                    <div class="right" style="float: right;">
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-text navbar-right">
+                                <a class="navbar-link" href="index.html"><img alt="home" data-toggle="tooltip" title="Home" src="img/home.png" style='height: 20px; width: auto;'> Home </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+        <!--fin header-->
+        <div class='container' style='margin-top: 70px;  margin-bottom: 70px;'>
+            <!--inicio galeria -->       
+            <center>
+                <h1>Animales</h1>
+                <div class="container">
+                    <div id="micarousel" class="carousel">
+                        <!--indicadores de bolitas debajo de la foto-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#micarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#micarousel" data-slide-to="1"></li>
+                            <li data-target="#micarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!--fin indicadores-->
+                        <div class="carousel-inner">
+                            <div id="1" class="item active">
+                                <img  src="img/animal1.jpg" alt="animal1" class="img-responsive">
+                            </div>
+                            <div id="2" class="item ">
+                                <img src="img/animal2.jpg" alt="animal1" class="img-responsive">
+                            </div>
+                            <div id="3" class="item ">
+                                <img src="img/animal3.jpg" alt="animal1" class="img-responsive">
+                            </div>
+                        </div>
+                        <!--flechitas de los lados-->
+                        <a class="carousel-control left" href="#micarousel" data-slide="prev"><span class="icon-prev"></span>
+                        </a>
+                        <a class="carousel-control right" href="#micarousel" data-slide="next"><span class="icon-next"></span>
+                        </a>
+                    </div>
+                    <h4>Redimensionar</h4>
+                    <p>
+                        <button id="change1" type="button" class="btn btn-primary">375X375</button>
+                        <button id="change2" type="button" class="btn btn-default">250X250</button>
+                    </p>
+                    <!--thumbnails-->
+                    <div class="row mithumbnail center-block">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail active" data-target="#micarousel" data-slide-to="0">
+                                <img src="img/animal1.jpg" alt="animal1" class="img-responsive" onclick="redimensionar('normal')">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4" data-target="#micarousel" data-slide-to="1">
+                            <div class="thumbnail">
+                                <img src="img/animal2.jpg" alt="animal1" class="img-responsive" onclick="redimensionar('normal')">
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4" data-target="#micarousel" data-slide-to="2">
+                            <div class="thumbnail" >
+                                <img src="img/animal3.jpg" alt="animal1" class="img-responsive" onclick="redimensionar('normal')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <!--fin  galeria-->
+        </div>
+            <footer class="row margin-top-15px">
+                <div class="panel-footer text-center color">
+                    <div class="footer_music">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#" >Back to top</a>
+                                </div>
+                                <div class="col-md-4">
+                                    Realizado por: <a href="https://nl.linkedin.com/in/castillafrancisco" target="blank" >Francisco Castilla</a> <!-- link linkedin -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </footer>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
+</html>

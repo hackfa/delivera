@@ -1,0 +1,26 @@
+.navbar{
+	background-color: #337AB7;
+	min-height:75px;
+
+}
+.navbar-default .navbar-text  {
+    color: #FFFFFF;
+}
+.navbar-default .navbar-text .navbar-link{
+	color:#FFFFFF;
+}
+
+h1{
+	 text-align:center;
+}
+
+#micarousel{
+	width:300px ;
+}
+.thumbnail{
+	width: 100px;
+	height: 100px;
+}
+.mithumbnail{
+	max-width: 350px;
+}
